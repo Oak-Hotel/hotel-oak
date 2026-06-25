@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Navbar from '../components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Hotel Oak Chhav | Nature-Inspired Retreat in Nainital',
@@ -14,21 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-        <div className="navbar-wrapper">
-          <nav className="navbar">
-            <a href="/" className="logo-container" style={{ textDecoration: 'none' }}>
-              <img src="/logo-nobg.png" alt="Hotel Oak Chhav Logo" className="logo" />
-              <span className="logo-text">Hotel Oak Chhav</span>
-            </a>
-            <div className="nav-links">
-              <a href="/#about">About</a>
-              <a href="/#accommodations">Accommodations</a>
-              <a href="/gallery">Gallery</a>
-              <a href="/nainital">Nainital</a>
-              <a href="/contact" className="btn btn-primary">Book Now</a>
-            </div>
-          </nav>
-        </div>
+        <Navbar />
         <main>{children}</main>
         <footer className="complex-footer">
           <div className="complex-footer-bg"></div>
