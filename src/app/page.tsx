@@ -71,7 +71,7 @@ export default function Home() {
             </div>
 
             <div className="room-card">
-              <Image src="/room3.png" alt="Oak House – Attique Style" width={800} height={600} className="room-card-img" />
+              <Image src="/room5.jpeg" alt="Oak House – Attique Style" width={800} height={600} className="room-card-img" />
               <h3>Oak House (Attique Style)</h3>
               <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '0' }}>1 Room available. Exclusive attic-style accommodation with distinctive architecture.</p>
               <ul className="room-features">
@@ -177,9 +177,8 @@ export default function Home() {
             <h2>Gallery Preview</h2>
           </div>
           <div className="gallery-preview-grid">
-            <Image src="/room1.png" alt="Gallery" width={600} height={400} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: 'var(--border-radius-md)' }} />
-            <Image src="/hero.png" alt="Gallery" width={600} height={400} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: 'var(--border-radius-md)' }} />
-            <Image src="/room2.png" alt="Gallery" width={600} height={400} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: 'var(--border-radius-md)' }} />
+            <Image src="/gallery1.jpeg" alt="Gallery" width={600} height={400} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: 'var(--border-radius-md)' }} />
+            <Image src="/gallery2.jpeg" alt="Gallery" width={600} height={400} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: 'var(--border-radius-md)' }} />
           </div>
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
             <a href="/gallery" className="btn btn-secondary">See Full Gallery</a>
