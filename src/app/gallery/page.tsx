@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Gallery | Hotel Oak Chhav',
@@ -7,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   const images = [
-    { id: 'img1', src: '/hero.png', alt: 'Hotel Oak Chhav Exterior View' },
-    { id: 'img2', src: '/room1.png', alt: 'Standard Double Room Interior' },
+    { id: 'img1', src: '/gallery1.jpeg', alt: 'Hotel Oak Chhav Exterior View' },
+    { id: 'img2', src: '/gallery2.jpeg', alt: 'Standard Double Room Interior' },
     { id: 'img3', src: '/room2.png', alt: 'Four-Bedded Family Room' },
     { id: 'img4', src: '/room3.png', alt: 'Oak House Attique Style' },
     { id: 'img5', src: '/nainital.png', alt: 'Naini Lake Scenic View' },
@@ -34,7 +35,7 @@ export default function GalleryPage() {
           <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '20px' }}>
             {images.map((img) => (
               <a key={img.id} href={`#${img.id}`} className="gallery-thumbnail">
-                <img src={img.src} alt={img.alt} style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
+                <Image src={img.src} alt={img.alt} width={800} height={600} style={{ width: '100%', height: '350px', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
                 <div className="gallery-overlay"><span>🔍 View Larger</span></div>
               </a>
             ))}
@@ -46,7 +47,7 @@ export default function GalleryPage() {
       {images.map((img) => (
         <div key={`lb-${img.id}`} id={img.id} className="lightbox">
           <a href="#_" className="lightbox-close">&times;</a>
-          <img src={img.src} alt={img.alt} />
+          <Image src={img.src} alt={img.alt} width={1200} height={800} style={{ width: '100%', height: 'auto', maxHeight: '90vh', objectFit: 'contain' }} />
         </div>
       ))}
     </>

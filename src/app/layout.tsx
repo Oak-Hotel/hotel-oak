@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import './globals.css';
 import Navbar from '../components/Navbar';
 
@@ -21,36 +23,44 @@ export default function RootLayout({
           <div className="complex-footer-bg"></div>
           <div className="container footer-grid" style={{ maxWidth: '1400px' }}>
             <div className="footer-col brand-col">
-              <img src="/logo.jpeg" alt="Hotel Oak Chhav Logo" className="footer-logo-large" />
+              <Image src="/logo.jpeg" alt="Hotel Oak Chhav Logo" className="footer-logo-large" width={150} height={150} />
               <p>A nature-inspired boutique hotel nestled in the serene oak forests of Ayarpata, Nainital. Experience comfort, warmth and the timeless charm of the hills.</p>
               <div className="social-icons">
-                <a href="#">f</a>
-                <a href="#">ig</a>
-                <a href="#">wa</a>
-                <a href="#">ta</a>
+                <a href="#" aria-label="Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                </a>
+                <a href="#" aria-label="Threads">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+                </a>
               </div>
             </div>
 
             <div className="footer-col">
               <h3 className="footer-heading">QUICK LINKS</h3>
               <ul className="footer-list">
-                <li><a href="/#home">Home</a></li>
-                <li><a href="/#accommodations">Rooms & Accommodation</a></li>
-                <li><a href="/gallery">Gallery</a></li>
-                <li><a href="/nainital">Explore Nainital</a></li>
-                <li><a href="/#about">About Us</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><Link href="/#home">Home</Link></li>
+                <li><Link href="/#accommodations">Rooms & Accommodation</Link></li>
+                <li><Link href="/gallery">Gallery</Link></li>
+                <li><Link href="/nainital">Explore Nainital</Link></li>
+                <li><Link href="/#about">About Us</Link></li>
+                <li><Link href="/contact">Contact Us</Link></li>
               </ul>
             </div>
 
             <div className="footer-col">
               <h3 className="footer-heading">ROOMS</h3>
               <ul className="footer-list">
-                <li><a href="/#accommodations">Double Bedded Rooms</a></li>
-                <li><a href="/#accommodations">Four Bedded Family Room</a></li>
-                <li><a href="/#accommodations">Triple Bedded Room</a></li>
-                <li><a href="/#accommodations">Oak House (Attique Style)</a></li>
-                <li><a href="/#amenities">Amenities & Facilities</a></li>
+                <li><Link href="/#accommodations">Double Bedded Rooms</Link></li>
+                <li><Link href="/#accommodations">Four Bedded Family Room</Link></li>
+                <li><Link href="/#accommodations">Triple Bedded Room</Link></li>
+                <li><Link href="/#accommodations">Oak House (Attique Style)</Link></li>
+                <li><Link href="/#amenities">Amenities & Facilities</Link></li>
               </ul>
             </div>
 
@@ -84,7 +94,7 @@ export default function RootLayout({
             <div className="container flex-between" style={{ maxWidth: '1400px' }}>
               <div>🌿 &copy; {new Date().getFullYear()} Hotel Oak Chhav. All Rights Reserved.</div>
               <div className="accent-text" style={{fontSize: '1.8rem', color: '#E2C792'}}>🌿 Where Nature Welcomes You 🌿</div>
-              <div>Developed by <span style={{color: '#E2C792'}}>Preet Tech</span></div>
+              <div>Developed by <a href="https://preettech.com" target="_blank" rel="noopener noreferrer"><span style={{color: '#E2C792'}}>Preet Tech</span></a></div>
             </div>
           </div>
         </footer>

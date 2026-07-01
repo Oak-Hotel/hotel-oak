@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import { Waves, Flower2, Landmark, Sun, Car } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Explore Nainital | Hotel Oak Chhav',
@@ -28,17 +31,17 @@ export default function NainitalPage() {
 
           <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
             <div className="feature-item" style={{ padding: '40px', background: '#fff', borderRadius: 'var(--border-radius-lg)', boxShadow: 'var(--box-shadow)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🌊</div>
+              <div style={{ marginBottom: '15px' }}><Waves size={48} color="var(--oak-green)" /></div>
               <h3>The Lake</h3>
               <p style={{ color: '#666' }}>Naini Lake is the heart of the town, offering boating, yachting, and serene promenades.</p>
             </div>
             <div className="feature-item" style={{ padding: '40px', background: '#fff', borderRadius: 'var(--border-radius-lg)', boxShadow: 'var(--box-shadow)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🕉️</div>
+              <div style={{ marginBottom: '15px' }}><Flower2 size={48} color="var(--oak-green)" /></div>
               <h3>Mythology</h3>
               <p style={{ color: '#666' }}>A revered Hindu pilgrimage site, believed to be the spot where the left eye of the Goddess Sati fell.</p>
             </div>
             <div className="feature-item" style={{ padding: '40px', background: '#fff', borderRadius: 'var(--border-radius-lg)', boxShadow: 'var(--box-shadow)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🏛️</div>
+              <div style={{ marginBottom: '15px' }}><Landmark size={48} color="var(--oak-green)" /></div>
               <h3>Colonial History</h3>
               <p style={{ color: '#666' }}>Developed as a British retreat, the town features colonial-era bungalows and heritage schools.</p>
             </div>
@@ -88,17 +91,17 @@ export default function NainitalPage() {
             <p>Make your journey to Nainital smooth and comfortable. Here is everything you need to know before you travel.</p>
             
             <div style={{ marginTop: '30px', background: '#fff', padding: '30px', borderRadius: 'var(--border-radius-md)', boxShadow: 'var(--box-shadow)' }}>
-              <h3 style={{ color: 'var(--oak-green)', display: 'flex', alignItems: 'center', gap: '10px' }}>☀️ Best Time to Visit</h3>
+              <h3 style={{ color: 'var(--oak-green)', display: 'flex', alignItems: 'center', gap: '10px' }}><Sun size={24} /> Best Time to Visit</h3>
               <p style={{ color: '#555' }}>March to May for pleasant weather, or mid-September to December for clear mountain views.</p>
             </div>
             
             <div style={{ marginTop: '20px', background: '#fff', padding: '30px', borderRadius: 'var(--border-radius-md)', boxShadow: 'var(--box-shadow)' }}>
-              <h3 style={{ color: 'var(--oak-green)', display: 'flex', alignItems: 'center', gap: '10px' }}>🚗 How to Reach</h3>
-              <p style={{ color: '#555', marginBottom: 0 }}>The nearest major railhead and transit hubs are in <strong>Kathgodam</strong> (~35 km away). From there, it's about an hour's drive by taxi or bus. <strong>Pantnagar Airport</strong> is the closest domestic flight hub (~55 km away).</p>
+              <h3 style={{ color: 'var(--oak-green)', display: 'flex', alignItems: 'center', gap: '10px' }}><Car size={24} /> How to Reach</h3>
+              <p style={{ color: '#555', marginBottom: 0 }}>The nearest major railhead and transit hubs are in <strong>Kathgodam</strong> (~35 km away). From there, it&apos;s about an hour&apos;s drive by taxi or bus. <strong>Pantnagar Airport</strong> is the closest domestic flight hub (~55 km away).</p>
             </div>
           </div>
           <div className="image-card">
-            <img src="/nainital.png" alt="Nainital Planning" style={{ height: '600px' }} />
+            <Image src="/nainital.png" alt="Nainital Planning" width={800} height={600} style={{ height: '600px', width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -111,9 +114,9 @@ export default function NainitalPage() {
           <p style={{ maxWidth: '600px', margin: '0 auto 30px', color: 'rgba(255,255,255,0.8)' }}>
             Make Hotel Oak Chhav your base camp for exploring Nainital. After a day of sightseeing, return to the peaceful serenity of the oak forests.
           </p>
-          <a href="/#accommodations" className="btn btn-primary" style={{ backgroundColor: 'var(--mist-sage)', color: 'var(--earth-brown)' }}>
+          <Link href="/#accommodations" className="btn btn-primary" style={{ backgroundColor: 'var(--mist-sage)', color: 'var(--earth-brown)' }}>
             View Our Rooms
-          </a>
+          </Link>
         </div>
       </section>
     </>
